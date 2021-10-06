@@ -1,7 +1,5 @@
 package contactBook;
 
-import contactBook.Contact;
-
 public class ContactBook {
     static final int DEFAULT_SIZE = 100;
 
@@ -103,6 +101,23 @@ public class ContactBook {
             }
         }
         return flag;
+    }
+
+    public Contact checkContact(int phoneNum){
+        boolean flag = false;
+        Contact c = null;
+
+        for(int i=0; i<counter-1; i++){
+            if(contacts[i].getPhone() == phoneNum){
+                if(flag == true){
+                    return c;
+                }
+                c = contacts[i];
+                flag = true;
+            }
+        }
+
+        return null;
     }
 
 }
