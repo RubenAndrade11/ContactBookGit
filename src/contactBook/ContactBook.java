@@ -104,16 +104,12 @@ public class ContactBook {
     }
 
     public Contact checkContact(int phoneNum){
-        boolean flag = false;
         Contact c = null;
 
-        for(int i=0; i<counter-1; i++){
+        for(int i=0; i<counter; i++){
             if(contacts[i].getPhone() == phoneNum){
-                if(flag == true){
-                    return c;
-                }
                 c = contacts[i];
-                flag = true;
+                return c;
             }
         }
 

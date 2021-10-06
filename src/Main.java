@@ -105,8 +105,7 @@ public class Main {
         }
         else System.out.println(NAME_NOT_EXIST);
     }
-
-    private static void getPhone(Scanner in, ContactBook cBook) {
+        private static void getPhone(Scanner in, ContactBook cBook) {
         String name;
         name = in.nextLine();
         if (cBook.hasContact(name)) {
@@ -165,15 +164,13 @@ public class Main {
     }
 
     private static void checkContact(Scanner in, ContactBook cBook){
-        int phoneNum = in.nextInt();
+        int phoneNum = in.nextInt();in.nextLine();
         Contact c = cBook.checkContact(phoneNum);
 
         if(c != null){
-            System.out.println(c.getPhone());
             System.out.println(c.getName());
         }
         else{
-            System.out.println(phoneNum);
             System.out.println(PHONE_NOT_FOUND);
         }
     }
