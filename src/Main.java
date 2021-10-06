@@ -13,7 +13,6 @@ public class Main {
     public static final String SET_PHONE      = "SP";
     public static final String SET_EMAIL      = "SE";
     public static final String LIST_CONTACTS  = "LC";
-    public static final String GET_NAME       = "GN";
     public static final String CHECK_REPEATED = "EP";
     public static final String QUIT           = "Q";
 
@@ -56,9 +55,6 @@ public class Main {
                     break;
                 case LIST_CONTACTS:
                     listAllContacts(cBook);
-                    break;
-                case GET_NAME:
-                    getName(in,cBook);
                     break;
                 case CHECK_REPEATED:
                     checkRepeated(cBook);
@@ -156,10 +152,6 @@ public class Main {
             }
         }
         else System.out.println(BOOK_EMPTY);
-    }
-
-    private static void getName(Scanner in, ContactBook cBook) {
-        System.out.println(BOOK_EMPTY);
     }
 
     private static void checkRepeated(ContactBook cBook) {
